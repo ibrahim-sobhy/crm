@@ -1,3 +1,4 @@
-export class LifeCyle {
-    name: string
+export class LifeCycle {
+    id: number;
+    name: string;
 }

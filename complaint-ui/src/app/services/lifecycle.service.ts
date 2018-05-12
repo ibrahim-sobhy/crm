@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { LifeCyle } from '../lifecycle';
-import { LIFE_CYCLES } from '../mock-lifecyle';
+import { LifeCycle } from '../lifecycle';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class LifecycleService {
 
-  private complaintapi = "http://localhost:8080/complaint/api/";
+  private complaintapi = "api/lifecycles";
 
   constructor(
     private http: HttpClient
   ) { }
   
 
-  getLifeCylces(): Observable<LifeCyle[]> {
-    return this.http.get<LifeCyle[]>(this.complaintapi);
+  getLifeCylces(): Observable<LifeCycle[]> {
+    return this.http.get<LifeCycle[]>(this.complaintapi);
   }
+
 }
